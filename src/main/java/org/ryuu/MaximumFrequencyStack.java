@@ -37,7 +37,7 @@ public class MaximumFrequencyStack {
             List<Integer> list = countValuesMap.get(maxCount);
             int value = list.remove(list.size() - 1);
             valueCountMap.put(value, valueCountMap.get(value) - 1);
-            if (list.size() == 0) {
+            if (list.isEmpty()) {
                 maxCount--;
             }
             return value;
