@@ -7,8 +7,8 @@ import java.util.*;
 /**
  * <a href="https://leetcode.cn/problems/zuma-game/description/">488. 祖玛游戏</a>
  */
-public class ZumaGame {
-    public static int findMinStep(String board, String hand) {
+public class LeetCode488 {
+    public int findMinStep(String board, String hand) {
         char[] arr = hand.toCharArray();
         Arrays.sort(arr);
         hand = new String(arr);
@@ -125,11 +125,12 @@ public class ZumaGame {
         //endregion
         return stringBuilder.toString();
     }
+
+    @AllArgsConstructor
+    private static class State {
+        final String board;
+        final String hand;
+        final int step;
+    }
 }
 
-@AllArgsConstructor
-class State {
-    final String board;
-    final String hand;
-    final int step;
-}

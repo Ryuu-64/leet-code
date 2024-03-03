@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MaximumFrequencyStackTest {
+class LeetCode895Test {
     @Test
     public void FreqStackTest() {
-        MaximumFrequencyStack.FreqStack freqStack = new MaximumFrequencyStack.FreqStack();
+        LeetCode895.FreqStack freqStack = new LeetCode895.FreqStack();
         freqStack.push(5);
         freqStack.push(7);
         freqStack.push(5);

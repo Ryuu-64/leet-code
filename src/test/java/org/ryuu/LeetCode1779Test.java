@@ -3,9 +3,9 @@ package org.ryuu;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.ryuu.FindNearestPointThatHasTheSameXOrYCoordinate.nearestValidPoint;
+import static org.ryuu.LeetCode1779.nearestValidPoint;
 
-class FindNearestPointThatHasTheSameXOrYCoordinateTest {
+class LeetCode1779Test {
     @Test
     public void nearestValidPointTest() {
         int x = 3;

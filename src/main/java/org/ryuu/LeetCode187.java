@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/repeated-dna-sequences"/>
+ * <a href="https://leetcode.cn/problems/repeated-dna-sequences"/>187. 重复的DNA序列<a/>
  */
-public interface RepeatedDnaSequences {
+public interface LeetCode187 {
     List<String> findRepeatedDnaSequences(String sourceString);
 
     /**
@@ -16,7 +16,7 @@ public interface RepeatedDnaSequences {
      * 位运算
      * 滑动窗口
      */
-    class RepeatedDnaSequencesSlidingWindow implements RepeatedDnaSequences {
+    class LeetCode187SlidingWindow implements LeetCode187 {
         private static final int windowLength = 10;
         private static final int bitPerNucleotide = 2;
         private static final Map<Character, Integer> nucleotideNameBitMap = new HashMap<Character, Integer>() {{
@@ -58,7 +58,7 @@ public interface RepeatedDnaSequences {
         }
     }
 
-    class RepeatedDnaSequencesSubString implements RepeatedDnaSequences {
+    class LeetCode187SubString implements LeetCode187 {
         private static final int targetLength = 10;
 
         public List<String> findRepeatedDnaSequences(String dna) {

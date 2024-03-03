@@ -9,7 +9,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ZumaGameTest {
+class LeetCode488Test {
+    private final LeetCode488 leetCode488 = new LeetCode488();
+
     @Test
     void findMinStep() {
         List<UseCase> useCases = Arrays.asList(
@@ -20,17 +22,17 @@ class ZumaGameTest {
         for (UseCase useCase : useCases) {
             assertEquals(
                     useCase.minStep,
-                    ZumaGame.findMinStep(useCase.board, useCase.hand)
+                    leetCode488.findMinStep(useCase.board, useCase.hand)
             );
         }
     }
 
     @Test
     void clean() {
-        assertEquals("", ZumaGame.clean("RRR"));
-        assertEquals("W", ZumaGame.clean("RRRW"));
-        assertEquals("", ZumaGame.clean("WWRRRW"));
-        assertEquals("BW", ZumaGame.clean("BRRRW"));
+        assertEquals("", leetCode488.clean("RRR"));
+        assertEquals("W", leetCode488.clean("RRRW"));
+        assertEquals("", leetCode488.clean("WWRRRW"));
+        assertEquals("BW", leetCode488.clean("BRRRW"));
     }
 
     @Getter

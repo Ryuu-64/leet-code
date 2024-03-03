@@ -3,9 +3,9 @@ package org.ryuu;
 import java.util.Arrays;
 
 /**
- * <a href="https://leetcode.cn/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/">1779. 找到最近的有相同 X 或 Y 坐标的点</a>
+ * <a href="https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/description/">2300. 咒语和药水的成功对数</a>
  */
-public class SuccessfulPairsOfSpellsAndPotions {
+public class LeetCode2300 {
     /**
      * 二分查找
      */

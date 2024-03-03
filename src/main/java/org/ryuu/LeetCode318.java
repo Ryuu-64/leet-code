@@ -3,7 +3,10 @@ package org.ryuu;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MaximumProductOfWordLengths {
+/**
+ * <a href="https://leetcode.cn/problems/maximum-product-of-word-lengths/description/">318. 最大单词长度乘积</a>
+ */
+public class LeetCode318 {
     public int maxProduct(String[] words) {
         //region 获取文本的掩码，文本的最大长度的 map
         Map<Integer, Integer> maskLengthMap = new HashMap<>();

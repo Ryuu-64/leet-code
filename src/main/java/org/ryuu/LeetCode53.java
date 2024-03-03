@@ -3,7 +3,7 @@ package org.ryuu;
 /**
  * <a href="https://leetcode.cn/problems/maximum-subarray/">53. 最大子数组和</a>
  */
-public class MaximumSubarray {
+public class LeetCode53 {
     public int maxSubArray(int[] nums) {
         int prev = 0;
         int curr = nums[0];
