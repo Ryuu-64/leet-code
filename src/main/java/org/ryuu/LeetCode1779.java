@@ -1,7 +1,7 @@
 package org.ryuu;
 
 /**
- * <a href="https://leetcode.cn/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/">1779. ÕÒµ½×î½üµÄÓĞÏàÍ¬ X »ò Y ×ø±êµÄµã</a>
+ * <a href="https://leetcode.cn/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/">1779. æ‰¾åˆ°æœ€è¿‘çš„æœ‰ç›¸åŒ X æˆ– Y åæ ‡çš„ç‚¹</a>
  */
 public class LeetCode1779 {
     public static int nearestValidPoint(int x, int y, int[][] points) {
