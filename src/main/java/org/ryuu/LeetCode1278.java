@@ -117,6 +117,7 @@ public class LeetCode1278 {
     }
 
     /**
+     * 滚动数组优化
      * 因为 dp(i, r) = min(dp(i - 1, l - 1) + minChange(l, r)), l ∈ [i, r]
      * dp 只需要用到 i - 1，不需要更早的状态，可以将 i 与 i + 1 的状态合并到一个一维数组
      * dp(r) = dp(l - 1) + minChange(l, r)
@@ -169,10 +170,10 @@ public class LeetCode1278 {
 
             int[] dpSplit = dpChange[0];
             for (int i = 1; i < k; i++) {
-                // 左边剩余的字串个数为 k - 1 - i
+                // 除本此外，剩余的子串个数为 k - 1 - i
                 // r 最大为 len - 1
                 // 考虑到剩余的字串会占据长度，且每个字串长度至少为 1
-                // r 最大为 len - 1 - (k - 1 - i)
+                // r 最大为 len - 1 - (k - 1 - i) * 1
                 // r = len - k + i
                 for (int r = len - k + i; r >= i; r--) {
                     dpSplit[r] = Integer.MAX_VALUE;
