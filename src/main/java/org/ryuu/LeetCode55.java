@@ -2,6 +2,7 @@ package org.ryuu;
 
 /**
  * <a href="https://leetcode.cn/problems/jump-game/description/"></a>
+ * <a href="https://en.wikipedia.org/wiki/Greedy_algorithm"></a>
  */
 public class LeetCode55 {
     public boolean canJump(int[] nums) {

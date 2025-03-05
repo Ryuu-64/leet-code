@@ -2,6 +2,9 @@ package org.ryuu;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.cn/problems/palindrome-partitioning-iii/description/"></a>
+ */
 public class LeetCode1278 {
     /**
      * 1. 字符串切分 dp
@@ -160,11 +163,11 @@ public class LeetCode1278 {
             int len = charArray.length;
 
             int[][] dpChange = new int[len][len];
-            for (int i = len - 2; i >= 0; i--) {
-                for (int j = i + 1; j < len; j++) {
-                    int curr = charArray[i] != charArray[j] ? 1 : 0;
-                    int last = dpChange[i + 1][j - 1];
-                    dpChange[i][j] = curr + last;
+            for (int left = len - 2; left >= 0; left--) {
+                for (int right = left + 1; right < len; right++) {
+                    int curr = charArray[left] != charArray[right] ? 1 : 0;
+                    int last = dpChange[left + 1][right - 1];
+                    dpChange[left][right] = curr + last;
                 }
             }
 
