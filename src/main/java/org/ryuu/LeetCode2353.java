@@ -1,6 +1,7 @@
 package org.ryuu;
 
-import javafx.util.Pair;
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.*;
 
@@ -27,11 +28,11 @@ public class LeetCode2353 {
                     String food = foods[i];
                     String cuisine = cuisines[i];
                     int rating = ratings[i];
-                    foodMap.put(food, new Pair<>(rating, cuisine));
+                    foodMap.put(food, new ImmutablePair<>(rating, cuisine));
                     cuisineMap.computeIfAbsent(
                             cuisine, k -> new TreeSet<>(RATTING_FOOD_COMPARATOR)
                     ).add(
-                            new Pair<>(rating, food)
+                            new ImmutablePair<>(rating, food)
                     );
                 }
             }
@@ -41,9 +42,9 @@ public class LeetCode2353 {
                 String cuisine = ratingCuisine.getValue();
                 Set<Pair<Integer, String>> ratingFood = cuisineMap.get(cuisine);
                 int ratting = ratingCuisine.getKey();
-                ratingFood.remove(new Pair<>(ratting, food));
-                ratingFood.add(new Pair<>(newRating, food));
-                foodMap.put(food, new Pair<>(newRating, cuisine));
+                ratingFood.remove(new ImmutablePair<>(ratting, food));
+                ratingFood.add(new ImmutablePair<>(newRating, food));
+                foodMap.put(food, new ImmutablePair<>(newRating, cuisine));
             }
 
             public String highestRated(String cuisine) {
@@ -70,19 +71,19 @@ public class LeetCode2353 {
                     String food = foods[i];
                     String cuisine = cuisines[i];
                     int rating = ratings[i];
-                    foodMap.put(food, new Pair<>(rating, cuisine));
+                    foodMap.put(food, new ImmutablePair<>(rating, cuisine));
                     cuisineMap.computeIfAbsent(
                             cuisine, k -> new PriorityQueue<>(CUISINE_COMPARATOR)
                     ).offer(
-                            new Pair<>(rating, food)
+                            new ImmutablePair<>(rating, food)
                     );
                 }
             }
 
             public void changeRating(String food, int newRating) {
                 String cuisine = foodMap.get(food).getValue();
-                cuisineMap.get(cuisine).offer(new Pair<>(newRating, food));
-                foodMap.put(food, new Pair<>(newRating, cuisine));
+                cuisineMap.get(cuisine).offer(new ImmutablePair<>(newRating, food));
+                foodMap.put(food, new ImmutablePair<>(newRating, cuisine));
             }
 
             public String highestRated(String cuisine) {
