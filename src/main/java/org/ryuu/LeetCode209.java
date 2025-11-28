@@ -7,20 +7,20 @@ public class LeetCode209 {
             return 0;
         }
 
-        int ans = Integer.MAX_VALUE;
+        int minLength = Integer.MAX_VALUE;
         int start = 0, end = 0;
         int sum = 0;
         while (end < length) {
             sum += nums[end];
             while (sum >= s) {
-                ans = Math.min(end - start + 1, ans);
+                minLength = Math.min(end - start + 1, minLength);
                 sum -= nums[start];
                 start++;
             }
             end++;
         }
 
-        return ans == Integer.MAX_VALUE ? 0 : ans;
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
 
     public int minSubArrayLenFromLeetCode(int s, int[] nums) {
