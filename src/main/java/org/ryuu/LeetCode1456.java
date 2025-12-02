@@ -7,7 +7,7 @@ package org.ryuu;
 public class LeetCode1456 {
     class Solution {
         public int maxVowels(String s, int k) {
-
+            return 0;
         }
     }
 }
