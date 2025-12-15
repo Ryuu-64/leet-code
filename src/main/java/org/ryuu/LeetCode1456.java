@@ -19,23 +19,23 @@ public class LeetCode1456 {
         }
 
         public int maxVowels(String s, int k) {
+            char[] chars = s.toCharArray();
             int maxVowels = 0;
             int vowels = 0;
-            for (int right = 0; right < s.length(); right++) {
-                char rightChar = s.charAt(right);
+            for (int right = 0; right < chars.length; right++) {
+                char rightChar = chars[right];
                 if (ALL_VOWELS.contains(rightChar)) {
                     vowels++;
                 }
 
-                if (right < k - 1) {
+                int nextLeft = right - k + 1;
+                if (nextLeft < 0) {
                     continue;
                 }
 
                 maxVowels = Math.max(vowels, maxVowels);
-
-                int left = right - k + 1;
-                char leftChar = s.charAt(left);
-                if (ALL_VOWELS.contains(leftChar)) {
+                char nextLeftChar = chars[nextLeft];
+                if (ALL_VOWELS.contains(nextLeftChar)) {
                     vowels--;
                 }
 
