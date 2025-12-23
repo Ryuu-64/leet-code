@@ -9,15 +9,38 @@ import java.util.Map;
 public class LeetCode3 {
     public static class Solution {
         public int lengthOfLongestSubstring(String s) {
+            char[] chars = s.toCharArray();
+            int res = 0;
+            int left = -1;
             Map<Character, Integer> charIndexMap = new HashMap<>();
-            int left = -1, res = 0;
-            for (int right = 0; right < s.length(); right++) {
-                char rightChar = s.charAt(right);
-                if (charIndexMap.containsKey(rightChar)) {
-                    left = Math.max(left, charIndexMap.get(rightChar));
+            for (int right = 0; right < chars.length; right++) {
+                char rightChar = chars[right];
+                int lastIndex = charIndexMap.getOrDefault(rightChar, -1);
+                if (lastIndex > left) {
+                    left = lastIndex;
                 }
                 charIndexMap.put(rightChar, right);
-                res = Math.max(res, right - left);
+                int windowLength = right - left;
+                res = Math.max(windowLength, res);
+            }
+
+            return res;
+        }
+    }
+
+    public static class Solution2 {
+        public int lengthOfLongestSubstring(String s) {
+            char[] chars = s.toCharArray();
+            int res = 0;
+            int left = -1;
+            Map<Character, Integer> charIndexMap = new HashMap<>();
+            for (int right = 0; right < chars.length; right++) {
+                char rightChar = chars[right];
+                int lastIndex = charIndexMap.getOrDefault(rightChar, -1);
+                left = Math.max(lastIndex, left);
+                charIndexMap.put(rightChar, right);
+                int length = right - left;
+                res = Math.max(length, res);
             }
             return res;
         }

@@ -6,21 +6,23 @@ package org.ryuu;
 public class LeetCode3090 {
     public static class Solution {
         public int maximumLengthSubstring(String s) {
+            int[] count = new int[26];
             char[] chars = s.toCharArray();
-            int ans = 0;
+            int maxLength = 0;
             int left = 0;
-            int[] cnt = new int[26];
             for (int right = 0; right < chars.length; right++) {
-                int rightChar = chars[right] - 'a';
-                cnt[rightChar]++;
-                while (cnt[rightChar] > 2) {
-                    int leftChar = chars[left] - 'a';
-                    cnt[leftChar]--;
+                int rightId = chars[right] - 'a';
+                count[rightId]++;
+                while (count[rightId] > 2) {
+                    int leftId = chars[left] - 'a';
+                    count[leftId]--;
                     left++;
                 }
-                ans = Math.max(ans, right - left + 1);
+                // 考虑 left right 都为 0 的情况，此时长度应为 1
+                maxLength = Math.max(right - left + 1, maxLength);
             }
-            return ans;
+
+            return maxLength;
         }
     }
 }
