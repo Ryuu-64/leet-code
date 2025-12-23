@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.fixedsize;
 
 /**
  * <a href="https://leetcode.cn/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/description/">1343. 大小为 K 且平均值大于等于阈值的子数组数目</a>

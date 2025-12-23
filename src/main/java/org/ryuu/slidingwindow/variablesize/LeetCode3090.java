@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.variablesize;
 
 /**
  * <a href="https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences/description/">3090. 每个字符最多出现两次的最长子字符串</a>

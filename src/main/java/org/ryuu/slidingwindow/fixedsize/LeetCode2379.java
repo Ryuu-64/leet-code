@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.fixedsize;
 
 /**
  * <a href="https://leetcode.cn/problems/minimum-recolors-to-get-k-consecutive-black-blocks/description/">2379. 得到 K 个黑块的最少涂色次数</a>

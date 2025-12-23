@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.variablesize;
 
 /**
  * <a href="https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/description/">1493. 删掉一个元素以后全为 1 的最长子数组</a>

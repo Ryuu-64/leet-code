@@ -2,6 +2,7 @@ package org.ryuu;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.ryuu.slidingwindow.fixedsize.LeetCode2090;
 
 class LeetCode2090Test {
     @Test

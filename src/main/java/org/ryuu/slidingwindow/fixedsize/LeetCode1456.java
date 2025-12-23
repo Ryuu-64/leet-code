@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.fixedsize;
 
 import java.util.HashSet;
 import java.util.Set;

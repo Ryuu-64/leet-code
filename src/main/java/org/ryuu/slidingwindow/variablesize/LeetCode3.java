@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.variablesize;
 
 import java.util.HashMap;
 import java.util.Map;

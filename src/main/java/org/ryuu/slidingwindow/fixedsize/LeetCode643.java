@@ -1,4 +1,4 @@
-package org.ryuu;
+package org.ryuu.slidingwindow.fixedsize;
 
 /**
  * <a href="https://leetcode.cn/problems/maximum-average-subarray-i/description/">643. 子数组最大平均数 I</a>
