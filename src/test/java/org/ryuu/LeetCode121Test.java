@@ -1,6 +1,7 @@
 package org.ryuu;
 
 import org.junit.jupiter.api.Test;
+import org.ryuu.base.array.LeetCode121;
 
 import static org.junit.jupiter.api.Assertions.*;
 
